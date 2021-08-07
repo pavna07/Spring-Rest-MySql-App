@@ -30,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 			emp = dao.save(emp);
 		} catch (DataAccessException e) {
 
-			throw new DatabaseException(" now  here is  issue with database!! "+e.getMessage());
+			throw new DatabaseException(" now  here is  some issue with database!! "+e.getMessage());
 		}
 		return emp;
 	}
