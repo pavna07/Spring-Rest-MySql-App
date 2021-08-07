@@ -25,11 +25,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = DataAccessException.class)
-	public Employee saveEmp(Employee emp) throws DatabaseException {
+	 public Employee saveEmp(Employee emp) throws DatabaseException {
 		try {
 			emp = dao.save(emp);
 		} catch (DataAccessException e) {
-			throw new DatabaseException("Some issue with database!! "+e.getMessage());
+
+			throw new DatabaseException(" now Some issue with database!! "+e.getMessage());
 		}
 		return emp;
 	}
